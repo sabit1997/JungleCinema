@@ -1,0 +1,46 @@
+.movie-list-sectoin {
+  background-color: #F2F2F2;
+}
+
+.movie-list-sectoin .title-txt {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.movie-list-sectoin .nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movie-list-sectoin .nav-item li {
+  font-size: 16px;
+  margin-right: 60px;
+}
+
+.movie-list-sectoin .nav-item li:last-child {
+  margin-right: 0;
+}
+
+.movie-list-sectoin .movie-list {
+  background-color: #fff;
+  display: -ms-grid;
+  display: grid;
+}
+
+.movie-list-sectoin .movie-list li {
+  padding: 19px 20px 0 20px;
+  border: 1px solid #BDBDBD;
+}
+
+.movie-list-sectoin .movie-list li .poster {
+  width: 180px;
+}
+/*# sourceMappingURL=style.css.map */
