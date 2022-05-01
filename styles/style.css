@@ -1,5 +1,24 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 91px;
+}
+
 .movie-list-sectoin {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   background-color: #F2F2F2;
+  padding: 41px 28px 31px 29px;
+  margin-bottom: 135px;
 }
 
 .movie-list-sectoin .title-txt {
@@ -18,6 +37,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 28px;
 }
 
 .movie-list-sectoin .nav-item li {
@@ -33,14 +53,133 @@
   background-color: #fff;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (220px)[4];
+      grid-template-columns: repeat(4, 220px);
+  padding: 26px 27px 31px;
+  gap: 23px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 0 auto;
 }
 
 .movie-list-sectoin .movie-list li {
-  padding: 19px 20px 0 20px;
+  width: 220px;
   border: 1px solid #BDBDBD;
+  border-radius: 10px;
+  padding: 19px 20px 0;
+  position: relative;
 }
 
 .movie-list-sectoin .movie-list li .poster {
   width: 180px;
+}
+
+.movie-list-sectoin .movie-list li .movie-name {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 23.17px;
+  color: #000;
+  margin-bottom: 12px;
+}
+
+.movie-list-sectoin .movie-list li .movie-info {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18.82px;
+}
+
+.movie-list-sectoin .movie-list li .movie-info dt {
+  color: #BDBDBD;
+  float: left;
+  margin-right: 5px;
+  float: left;
+}
+
+.movie-list-sectoin .movie-list li .movie-info dd {
+  float: left;
+}
+
+.movie-list-sectoin .movie-list li .movie-info dd:nth-child(2) {
+  margin-right: 42px;
+}
+
+.movie-list-sectoin .movie-list li .movie-info dd:last-child {
+  margin-bottom: 59px;
+}
+
+.movie-list-sectoin .movie-list li .fill-button {
+  padding: 9px 0 12px 0;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.movie-list-sectoin .movie-list li .fill-button.left {
+  left: 0;
+}
+
+.movie-list-sectoin .movie-list li .fill-button.right {
+  right: 0;
+}
+
+.footer-section {
+  background-color: #F2F2F2;
+  width: 100%;
+}
+
+.footer-section .tit-sns-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 78px;
+}
+
+.footer-section .tit-sns-wrap .footer-tit {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 25.78px;
+  color: #000;
+}
+
+.footer-section .tit-sns-wrap .sns-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer-section .tit-sns-wrap .sns-wrap li {
+  margin-right: 25px;
+}
+
+.footer-section .tit-sns-wrap .sns-wrap li:last-child {
+  margin-right: 0;
+}
+
+.footer-section .company-info {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20.27px;
+  color: #4f4f4f;
+}
+
+.footer-section .company-info dt, .footer-section .company-info dd {
+  float: left;
+}
+
+.footer-section .company-info dt {
+  margin-right: 2px;
+  font-weight: 700;
+}
+
+.footer-section .company-info dd {
+  margin-right: 10px;
+}
+
+.footer-section .company-info .copyright {
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */
