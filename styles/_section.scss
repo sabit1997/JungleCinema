@@ -1,4 +1,5 @@
 body {
+    font-family: 'Noto Sans KR', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,11 +9,25 @@ body {
     width: fit-content;
     background-color: $bg-gray;
     padding: 41px 28px 31px 29px;
+    border: 2px solid $line-gray;
+    border-radius: 15px;
     margin-bottom: 135px;
+    position: relative;
     .title-txt {
         font-size: 24px;
         text-align: center;
         margin-bottom: 65px;
+        &::after {
+            display: block;
+            content: '';
+            width: 650px;
+            height: 2px;
+            background-color: $line-gray;
+            position: absolute;
+            top: 102px;
+            left: 50%;
+            transform: translateX(-50%)
+        }
     }
     .nav-item {
         @include flex-center;
@@ -20,6 +35,13 @@ body {
         li {
             font-size: 16px;
             margin-right: 60px;
+            transition: all 0.5s ease-in ;
+            &:hover {
+                font-weight: 900;
+            }
+            &:first-child {
+                font-weight: 900;
+            }
             &:last-child {
                 margin-right: 0;
             }
@@ -30,6 +52,8 @@ body {
         display: grid;
         grid-template-columns: repeat(4, 220px);
         padding: 26px 27px 31px;
+        border-radius: 15px;
+        border: 2px solid $line-gray;
         gap: 23px;
         width: fit-content;
         margin: 0 auto 0 auto;
@@ -37,8 +61,10 @@ body {
             width: 220px;
             border: 1px solid $line-gray;
             border-radius: 10px;
-            padding: 19px 20px 0;
+            box-shadow: 0px 0px 5px 0px #0000004D;
+            padding: 19px 20px 59px 20px;
             position: relative;
+            overflow: hidden;
             .poster {
                 width: 180px;
             }
@@ -53,19 +79,36 @@ body {
                 font-size: 13px;
                 font-weight: 400;
                 line-height: 18.82px;
+                overflow: hidden;
+                display: grid;
+                gap: 5px;
+                grid-template-columns: 24px 1fr 24px 44px;
+                .premiere-date {
+                    grid-column: 2 / 5;
+                }
+                .casts-desc {
+                    grid-column: 2 / 5;
+                }
+                .rating, .rating-num {
+                    text-align: right;
+                }
                 dt {
-                    color: $line-gray;
-                    float: left;
-                    margin-right: 5px;
-                    float: left;
+                    color: $txt-gray;
+                    font-weight: 400;
                 }
                 dd {
-                    float: left;
-                    &:nth-child(2) {
-                        margin-right: 42px;
-                    }
-                    &:last-child {
-                        margin-bottom: 59px;
+                    color: #000;
+                    font-weight: 400;
+                    &:nth-child(4)::before {
+                        display: block;
+                        content: '';
+                        width: 14px;
+                        height: 18.81px;
+                        background-repeat: no-repeat;
+                        background-image: url(../images/star.png);
+                        background-position: center;
+                        float: left;
+                        margin-right: 4px;
                     }
                 }
             }
@@ -74,13 +117,27 @@ body {
                 width: 50%;
                 position: absolute;
                 bottom: 0;
+                border-top: 1px solid $line-gray;
                 &.left {
                     left: 0;
+                    border-right: 1px solid $line-gray;
                 }
                 &.right {
                     right: 0;
+                    padding-left: 18px;
+                    &::before {
+                        display: block;
+                        content: '';
+                        width: 16px;
+                        height: 16px;
+                        background-image: url(../images/btn_play.png);
+                        position: absolute;
+                        top: 50%;
+                        left: 24px;
+                        transform: translateY(-50%);
+                        }
+                    }
                 }
-            }
         }
     }
 }
@@ -88,43 +145,65 @@ body {
 .footer-section {
     background-color: $bg-gray;
     width: 100%;
-    .tit-sns-wrap {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 78px;
-        .footer-tit {
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 25.78px;
-            color: #000;
-        }
-        .sns-wrap {
+    .footer-wrap {
+        width: 1156px;
+        margin: 0 auto;
+        position: relative;
+        overflow: hidden;
+            .tit-sns-wrap {
             display: flex;
-            li {
-                margin-right: 25px;
+            justify-content: space-between;
+            padding-top: 53px;
+            margin-bottom: 78px;
+            .footer-tit {
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 25.78px;
+                color: #000;
+                &::after {
+                    display: block;
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: #C4C4C4;
+                    position: absolute;
+                    top: 119px;
+                    left: 0;
+                }
+            }
+            .sns-wrap {
+                display: flex;
+                li {
+                    margin-right: 25px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .company-info {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20.27px;
+            color: #4f4f4f;
+            dt, dd {
+                float: left;
+            }
+            dt {
+                margin-right: 2px;
+                font-weight: 700;
+            }
+            dd {
+                margin-right: 10px;
                 &:last-child {
                     margin-right: 0;
                 }
             }
         }
-    }
-    .company-info {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20.27px;
-        color: #4f4f4f;
-        dt, dd {
-            float: left;
-        }
-        dt {
-            margin-right: 2px;
-            font-weight: 700;
-        }
-        dd {
-            margin-right: 10px;
-        }
         .copyright {
+            line-height: 20.27px;
             float: right;
+            margin-bottom: 38px;
         }
     }
 }

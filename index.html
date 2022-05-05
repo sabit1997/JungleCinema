@@ -7,15 +7,18 @@
     <title>정글 시네마 영화 목로 </title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="movie-list-sectoin">
         <h1 class="title-txt">정글 시네마 영화 목록</h1>
         <nav class="local-nav">
             <ul class="nav-item">
-                <li>현재상영영화</li>
-                <li>개봉예정영화</li>
-                <li>박스오피스</li>
+                <li><a href="#none">현재상영영화</a></li>
+                <li><a href="#none">개봉예정영화</a></li>
+                <li><a href="#none">박스오피스</a></li>
             </ul>
         </nav>
         <ul class="movie-list">
@@ -28,9 +31,9 @@
                     <dt>평점</dt>
                     <dd>9.05</dd>
                     <dt>개봉</dt>
-                    <dd>2021.03.27</dd>
+                    <dd class="premiere-date">2021.03.27</dd>
                     <dt>출연</dt>
-                    <dd>라이캣, 소울곰, 개리씨</dd>
+                    <dd class="casts-desc">라이캣, 소울곰, 개리씨</dd>
                 </dl>
                 <button class="fill-button left" type="button">예매하기</button>
                 <button class="fill-button right" type="button">예고편</button>
@@ -39,14 +42,14 @@
                 <img class="poster" src="./images/movie_java.png" alt="">
                 <p class="movie-name">눈떠보니 코딩테스트 전날</p>
                 <dl class="movie-info">
-                    <dt>개요</dt>
-                    <dd>스릴러</dd>
-                    <dt>평점</dt>
-                    <dd>8.25</dd>
-                    <dt>개봉</dt>
-                    <dd>2021.04.01</dd>
-                    <dt>출연</dt>
-                    <dd>자바독, 개리씨, 빙키</dd>
+                    <dt class="outline">개요</dt>
+                    <dd class="outline-desc">스릴러</dd>
+                    <dt class="rating">평점</dt>
+                    <dd class="rating-num">8.25</dd>
+                    <dt class="premiere">개봉</dt>
+                    <dd class="premiere-date">2021.04.01</dd>
+                    <dt class="casts">출연</dt>
+                    <dd class="casts-desc">자바독, 개리씨, 빙키</dd>
                 </dl>
                 <button class="fill-button left" type='button'>예매하기</button>
                 <button class="fill-button right" type="button">예고편</button>
@@ -60,9 +63,9 @@
                     <dt>평점</dt>
                     <dd>8.77</dd>
                     <dt>개봉</dt>
-                    <dd>2021.04.12</dd>
+                    <dd class="premiere-date">2021.04.12</dd>
                     <dt>출연</dt>
-                    <dd>캣, 파이, 썬, 뮤라</dd>
+                    <dd class="casts-desc">캣, 파이, 썬, 뮤라</dd>
                 </dl>
                 <button class="fill-button left" type='button'>예매하기</button>
                 <button class="fill-button right" type="button">예고편</button>
@@ -76,9 +79,9 @@
                     <dt>평점</dt>
                     <dd>8.81</dd>
                     <dt>개봉</dt>
-                    <dd>2021.04.08</dd>
+                    <dd class="premiere-date">2021.04.08</dd>
                     <dt>출연</dt>
-                    <dd>파이썬, 큐티</dd>
+                    <dd class="casts-desc">파이썬, 큐티</dd>
                 </dl>
                 <button class="fill-button left" type='button'>예매하기</button>
                 <button class="fill-button right" type="button">예고편</button>
@@ -92,9 +95,9 @@
                     <dt>평점</dt>
                     <dd>9.88</dd>
                     <dt>개봉</dt>
-                    <dd>2021.04.15</dd>
+                    <dd class="premiere-date">2021.04.15</dd>
                     <dt>출연</dt>
-                    <dd>NGINX, 노션</dd>
+                    <dd class="casts-desc">NGINX, 노션</dd>
                 </dl>
                 <button class="fill-button left" type='button'>예매하기</button>
                 <button class="fill-button right" type="button">예고편</button>
@@ -108,9 +111,9 @@
                     <dt>평점</dt>
                     <dd>9.25</dd>
                     <dt>개봉</dt>
-                    <dd>2021.04.17</dd>
+                    <dd class="premiere-date">2021.04.17</dd>
                     <dt>출연</dt>
-                    <dd>라이캣, 자바독, 소울곰</dd>
+                    <dd class="casts-desc">라이캣, 자바독, 소울곰</dd>
                 </dl>
                 <button class="fill-button left" type='button'>예매하기</button>
                 <button class="fill-button right" type="button">예고편</button>
@@ -124,9 +127,9 @@
                     <dt>평점</dt>
                     <dd>8.56</dd>
                     <dt>개봉</dt>
-                    <dd>2021.04.05</dd>
+                    <dd class="premiere-date">2021.04.05</dd>
                     <dt>출연</dt>
-                    <dd>개리씨, 파이썬</dd>
+                    <dd class="casts-desc">개리씨, 파이썬</dd>
                 </dl>
                 <button class="fill-button left" type='button'>예매하기</button>
                 <button class="fill-button right" type="button">예고편</button>
@@ -140,9 +143,9 @@
                     <dt>평점</dt>
                     <dd>9.02</dd>
                     <dt>개봉</dt>
-                    <dd>2021.04.12</dd>
+                    <dd class="premiere-date">2021.04.12</dd>
                     <dt>출연</dt>
-                    <dd>라이캣, 개리씨, 자바독</dd>
+                    <dd class="casts-desc">라이캣, 개리씨, 자바독</dd>
                 </dl>
                 <button class="fill-button left" type='button'>예매하기</button>
                 <button class="fill-button right" type="button">예고편</button>
@@ -150,28 +153,31 @@
         </ul>
     </section>
     <footer class="footer-section">
-        <div class="tit-sns-wrap">
-            <h2 class="footer-tit">Jungle Cinema</h2>
-            <ul class="sns-wrap">
-                <li><img class="sns" src="images/twitter.png" alt="go twitter"></li>
-                <li><img class="sns" src="images/instagram.png" alt="go instagram"></li>
-                <li><img class="sns" src="images/facebook.png" alt="go facebook"></li>
-            </ul>
+        <div class="footer-wrap">
+            <div class="tit-sns-wrap">
+                <h2 class="footer-tit">Jungle Cinema</h2>
+                <ul class="sns-wrap">
+                    <li><a href="#none"><img class="sns" src="images/twitter.png" alt="go twitter"></a></li>
+                    <li><a href="#none"><img class="sns" src="images/instagram.png" alt="go instagram"></a></li>
+                    <li><a href="#none"><img class="sns" src="images/facebook.png" alt="go facebook"></a></li>
+                </ul>
+            </div>
+            <dl class="company-info">
+                <dt class="ir">회사</dt>
+                <dd>(주)정글 시네마</dd>
+                <dt>대표</dt>
+                <dd>라이언</dd>
+                <dt>사업자 번호</dt>
+                <dd>000-0000-0000</dd>
+                <dt class="ir">업종</dt>
+                <dd>광고 영화 및 비디오물 제작업</dd>
+                <dt>주소</dt>
+                <dd>서울특별시</dd>
+            </dl>
+            <address class="copyright">
+                ⓒ The Jungle
+            </address>
         </div>
-        <dl class="company-info">
-            <dt class="ir">회사</dt>
-            <dd>(주)정글 시네마</dd>
-            <dt>대표</dt>
-            <dd>라이언</dd>
-            <dt>사업자 번호</dt>
-            <dd>000-0000-0000</dd>
-            <dt class="ir">업종</dt>
-            <dd>광고 영화 및 비디오물 제작업</dd>
-            <dt>주소</dt>
-            <dd>서울특별시</dd>
-        </dl>
-        <address class="copyright">
-            ⓒ The Jungle
-        </address>
+        </footer>
 </body>
 </html>

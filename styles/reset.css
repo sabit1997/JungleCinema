@@ -4,18 +4,6 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-  
-body {
-    font-family: "DM Sans", sans-serif;
-    color: #2b292d;
-    letter-spacing: -0.01em;
-}
-
-  /* Reset */
-p {
-    font-size: 16px;
-    line-height: 1.5;
-}
 
 ul,
 ol,
@@ -42,13 +30,13 @@ input:active {
 }
 
 button {
+    border-radius: 0;
     border: none;
-    border-radius: 2px;
     cursor: pointer;
 }
 
 button,
 input,
 textarea {
-    font-family: "DM Sans", sans-serif;
+    font-family: inherit;
 }
